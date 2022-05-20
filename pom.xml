@@ -154,7 +154,7 @@
         <ivy.version>2.4.0</ivy.version>
         <jackson.version>1.9.13</jackson.version>
         <!-- jackson 1 and 2 lines can coexist without issue, as they have different artifactIds -->
-        <jackson.new.version>2.6.5</jackson.new.version>
+        <jackson.new.version>2.11.1</jackson.new.version>
         <jasper.version>5.5.23</jasper.version>
         <jamon.plugin.version>2.3.4</jamon.plugin.version>
         <jamon-runtime.version>2.3.1</jamon-runtime.version>
@@ -208,6 +208,19 @@
         <tephra.version>0.6.0</tephra.version>
         <gson.version>2.2.4</gson.version>
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>oa</id>
+            <name>tencent_public</name>
+            <url>https://mirrors.tencent.com/repository/maven/tencent_public/</url>
+        </repository>
+        <snapshotRepository>
+            <id>oa</id>
+            <name>tencent_public_snapshots</name>
+            <url>https://mirrors.tencent.com/repository/maven/tencent_public_snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <repositories>
         <repository>
@@ -559,7 +572,7 @@
             <dependency>
                 <groupId>org.codehaus.jackson</groupId>
                 <artifactId>jackson-core-asl</artifactId>
-                <version>${jackson.version}</version>
+                <version>1.9.13</version>
             </dependency>
             <dependency>
                 <groupId>org.codehaus.jackson</groupId>
