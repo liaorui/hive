@@ -7,7 +7,7 @@
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,35 +15,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.apache.hadoop.hive.llap.metrics;
 
+import com.google.common.base.MoreObjects;
 import org.apache.hadoop.metrics2.MetricsInfo;
-
-import com.google.common.base.Objects;
 
 /**
  * Llap daemon I/O elevator metrics
  */
 public enum LlapDaemonIOInfo implements MetricsInfo {
-  IOMetrics("Llap daemon I/O elevator metrics"),
-  PercentileDecodingTime("Percentile decoding time for encoded column batch"),
-  MaxDecodingTime("Max time for decoding an encoded column batch");
+    IOMetrics("Llap daemon I/O elevator metrics"),
+    PercentileDecodingTime("Percentile decoding time for encoded column batch"),
+    MaxDecodingTime("Max time for decoding an encoded column batch");
 
-  private final String desc;
+    private final String desc;
 
-  LlapDaemonIOInfo(String desc) {
-    this.desc = desc;
-  }
+    LlapDaemonIOInfo(String desc) {
+        this.desc = desc;
+    }
 
-  @Override
-  public String description() {
-    return desc;
-  }
+    @Override
+    public String description() {
+        return desc;
+    }
 
-  @Override
-  public String toString() {
-    return Objects.toStringHelper(this)
-        .add("name", name()).add("description", desc)
-        .toString();
-  }
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("name", name()).add("description", desc)
+                .toString();
+    }
 }

@@ -7,7 +7,7 @@
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,11 +15,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.apache.hadoop.hive.llap.metrics;
 
+import com.google.common.base.MoreObjects;
 import org.apache.hadoop.metrics2.MetricsInfo;
-
-import com.google.common.base.Objects;
 
 /**
  * Llap daemon JVM info. These are some additional metrics that are not exposed via
@@ -29,32 +29,32 @@ import com.google.common.base.Objects;
  * that gives all these info.
  */
 public enum LlapDaemonJvmInfo implements MetricsInfo {
-  LlapDaemonJVMMetrics("Llap daemon JVM related metrics"),
-  LlapDaemonDirectBufferCount("Total number of direct byte buffers"),
-  LlapDaemonDirectBufferTotalCapacity("Estimate of total capacity of all allocated direct byte buffers in bytes"),
-  LlapDaemonDirectBufferMemoryUsed("Estimate of memory that JVM is using for the allocated buffers in bytes"),
-  LlapDaemonMappedBufferCount("Total number of mapped byte buffers"),
-  LlapDaemonMappedBufferTotalCapacity("Estimate of total capacity of all mapped byte buffers in bytes"),
-  LlapDaemonMappedBufferMemoryUsed("Estimate of memory that JVM is using for mapped byte buffers in bytes"),
-  LlapDaemonOpenFileDescriptorCount("Number of open file descriptors"),
-  LlapDaemonMaxFileDescriptorCount("Maximum number of file descriptors"),
-  ;
+    LlapDaemonJVMMetrics("Llap daemon JVM related metrics"),
+    LlapDaemonDirectBufferCount("Total number of direct byte buffers"),
+    LlapDaemonDirectBufferTotalCapacity("Estimate of total capacity of all allocated direct byte buffers in bytes"),
+    LlapDaemonDirectBufferMemoryUsed("Estimate of memory that JVM is using for the allocated buffers in bytes"),
+    LlapDaemonMappedBufferCount("Total number of mapped byte buffers"),
+    LlapDaemonMappedBufferTotalCapacity("Estimate of total capacity of all mapped byte buffers in bytes"),
+    LlapDaemonMappedBufferMemoryUsed("Estimate of memory that JVM is using for mapped byte buffers in bytes"),
+    LlapDaemonOpenFileDescriptorCount("Number of open file descriptors"),
+    LlapDaemonMaxFileDescriptorCount("Maximum number of file descriptors"),
+    ;
 
-  private final String desc;
+    private final String desc;
 
-  LlapDaemonJvmInfo(String desc) {
-    this.desc = desc;
-  }
+    LlapDaemonJvmInfo(String desc) {
+        this.desc = desc;
+    }
 
-  @Override
-  public String description() {
-    return desc;
-  }
+    @Override
+    public String description() {
+        return desc;
+    }
 
-  @Override
-  public String toString() {
-    return Objects.toStringHelper(this)
-      .add("name", name()).add("description", desc)
-      .toString();
-  }
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("name", name()).add("description", desc)
+                .toString();
+    }
 }
