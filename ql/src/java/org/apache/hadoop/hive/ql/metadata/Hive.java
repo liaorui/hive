@@ -3813,7 +3813,7 @@ public class Hive {
             GetAllFunctionsResponse response = getMSC().getAllFunctions();
             List<Function> functions = null;
             if (response != null) {
-                functions = getMSC().getAllFunctions().getFunctions();
+                functions = response.getFunctions();
             }
             return functions == null ? new ArrayList<>() : functions;
         } catch (TException te) {

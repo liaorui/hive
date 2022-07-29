@@ -411,7 +411,11 @@ public class Table implements Serializable {
    }
 
   public TableType getTableType() {
-     return Enum.valueOf(TableType.class, tTable.getTableType());
+     if (tTable.getTableType() != null) {
+       return Enum.valueOf(TableType.class, tTable.getTableType());
+     } else {
+       return TableType.MANAGED_TABLE;
+     }
    }
 
   public ArrayList<StructField> getFields() {
