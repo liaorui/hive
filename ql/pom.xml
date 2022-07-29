@@ -879,7 +879,7 @@
                                     <include>com.esotericsoftware:kryo-shaded</include>
                                     <include>com.esotericsoftware:minlog</include>
                                     <include>org.objenesis:objenesis</include>
-                                    <include>org.apache.parquet:parquet-hadoop-bundle</include>
+                                    <!--<include>org.apache.parquet:parquet-hadoop-bundle</include>-->
                                     <include>org.apache.thrift:libthrift</include>
                                     <include>org.apache.thrift:libfb303</include>
                                     <include>javax.jdo:jdo-api</include>
