@@ -969,7 +969,7 @@ public class Hive {
         for (Function function : getAllFunctions()) {
             String functionName = function.getFunctionName();
             try {
-                LOG.warn("Registering function " + functionName + " " + function.getClassName());
+                LOG.debug("Registering function " + functionName + " " + function.getClassName());
                 String qualFunc = FunctionUtils.qualifyFunctionName(functionName, function.getDbName());
                 FunctionRegistry.registerPermanentFunction(qualFunc, function.getClassName(), false,
                         FunctionTask.toFunctionResource(function.getResourceUris()));
