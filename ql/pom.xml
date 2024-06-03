@@ -23,6 +23,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <version>2.3.7-we-SNAPSHOT</version>
     <artifactId>hive-exec</artifactId>
     <packaging>jar</packaging>
     <name>Hive Query Language</name>
@@ -51,7 +52,7 @@
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-vector-code-gen</artifactId>
-            <version>${project.version}</version>
+            <version>${parent.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.hive</groupId>
@@ -84,7 +85,7 @@
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-service-rpc</artifactId>
-            <version>${project.version}</version>
+            <version>${parent.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.hive</groupId>
@@ -99,12 +100,12 @@
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-shims</artifactId>
-            <version>${project.version}</version>
+            <version>${parent.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>spark-client</artifactId>
-            <version>${project.version}</version>
+            <version>${parent.version}</version>
         </dependency>
         <!-- inter-project -->
         <dependency>

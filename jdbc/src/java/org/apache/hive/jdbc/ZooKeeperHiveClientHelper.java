@@ -64,6 +64,7 @@ class ZooKeeperHiveClientHelper {
       serverHosts = zooKeeperClient.getChildren().forPath("/" + zooKeeperNamespace);
       // Remove the znodes we've already tried from this list
       serverHosts.removeAll(connParams.getRejectedHostZnodePaths());
+      serverHosts.remove("leader");
       if (serverHosts.isEmpty()) {
         throw new ZooKeeperHiveClientException(
             "Tried all existing HiveServer2 uris from ZooKeeper.");

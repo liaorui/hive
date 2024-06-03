@@ -23,6 +23,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <version>2.3.7-we-SNAPSHOT</version>
     <artifactId>hive-llap-tez</artifactId>
     <packaging>jar</packaging>
     <name>Hive Llap Tez</name>
@@ -48,7 +49,7 @@
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-llap-common</artifactId>
-            <version>${project.version}</version>
+            <version>${parent.version}</version>
             <classifier>tests</classifier>
             <scope>test</scope>
         </dependency>
