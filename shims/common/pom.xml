@@ -23,6 +23,7 @@
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
+  <version>2.1.1-we-SNAPSHOT</version>
   <groupId>org.apache.hive.shims</groupId>
   <artifactId>hive-shims-common</artifactId>
   <packaging>jar</packaging>

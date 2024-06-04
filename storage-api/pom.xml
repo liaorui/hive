@@ -23,6 +23,7 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
+  <version>2.1.1-we-SNAPSHOT</version>
   <artifactId>hive-storage-api</artifactId>
   <packaging>jar</packaging>
   <name>Hive Storage API</name>

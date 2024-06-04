@@ -193,6 +193,19 @@
     <gson.version>2.2.4</gson.version>
   </properties>
 
+  <distributionManagement>
+    <repository>
+      <id>oa</id>
+      <name>tencent_public</name>
+      <url>https://mirrors.tencent.com/repository/maven/tencent_public/</url>
+    </repository>
+    <snapshotRepository>
+      <id>oa</id>
+      <name>tencent_public_snapshots</name>
+      <url>https://mirrors.tencent.com/repository/maven/tencent_public_snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <repositories>
    <!-- This needs to be removed before checking in-->
     <repository>

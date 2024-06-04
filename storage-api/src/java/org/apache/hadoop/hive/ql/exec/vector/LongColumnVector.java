@@ -221,4 +221,11 @@ public class LongColumnVector extends ColumnVector {
       }
     }
   }
+
+  @Override
+  public void shallowCopyTo(ColumnVector otherCv) {
+    LongColumnVector other = (LongColumnVector) otherCv;
+    super.shallowCopyTo(other);
+    other.vector = vector;
+  }
 }

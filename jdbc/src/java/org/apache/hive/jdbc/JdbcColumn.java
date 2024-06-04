@@ -156,6 +156,8 @@ public class JdbcColumn {
       return Type.ARRAY_TYPE;
     } else if ("struct".equalsIgnoreCase(type)) {
       return Type.STRUCT_TYPE;
+    } else if ("uniontype".equalsIgnoreCase(type)) {
+      return Type.UNION_TYPE;
     } else if ("void".equalsIgnoreCase(type) || "null".equalsIgnoreCase(type)) {
       return Type.NULL_TYPE;
     }
@@ -213,6 +215,8 @@ public class JdbcColumn {
       return serdeConstants.LIST_TYPE_NAME;
     } else if (type.equalsIgnoreCase("struct")) {
       return serdeConstants.STRUCT_TYPE_NAME;
+    } else if (type.equalsIgnoreCase("uniontype")) {
+      return serdeConstants.UNION_TYPE_NAME;
     }
 
     throw new SQLException("Unrecognized column type: " + type);
