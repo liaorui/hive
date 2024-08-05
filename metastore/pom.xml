@@ -39,11 +39,23 @@
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-serde</artifactId>
             <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jetty-all</artifactId>
+                    <groupId>org.eclipse.jetty.aggregate</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-shims</artifactId>
             <version>${parent.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>hadoop-yarn-server-resourcemanager</artifactId>
+                    <groupId>org.apache.hadoop</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>javolution</groupId>
@@ -73,6 +85,10 @@
                 <exclusion>
                     <groupId>commmons-logging</groupId>
                     <artifactId>commons-logging</artifactId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jetty-util</artifactId>
+                    <groupId>org.mortbay.jetty</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -146,6 +162,7 @@
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-common</artifactId>
             <version>${hadoop.version}</version>
+            <scope>provided</scope>
             <optional>true</optional>
             <exclusions>
                 <exclusion>
@@ -162,6 +179,7 @@
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-hdfs</artifactId>
             <version>${hadoop.version}</version>
+            <scope>provided</scope>
             <optional>true</optional>
             <exclusions>
                 <exclusion>
@@ -178,6 +196,7 @@
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-mapreduce-client-core</artifactId>
             <version>${hadoop.version}</version>
+            <scope>provided</scope>
             <optional>true</optional>
             <exclusions>
                 <exclusion>
@@ -236,6 +255,12 @@
             <version>${project.version}</version>
             <type>test-jar</type>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jetty-all</artifactId>
+                    <groupId>org.eclipse.jetty.aggregate</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- test inter-project -->
         <dependency>
