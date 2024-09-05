@@ -23,7 +23,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <version>2.3.7-we-SNAPSHOT</version>
+    <version>2.3.7-we-2311R2-SNAPSHOT</version>
     <artifactId>hive-exec</artifactId>
     <packaging>jar</packaging>
     <name>Hive Query Language</name>
